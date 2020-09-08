@@ -9,11 +9,11 @@ import (
 
 
 func SendDingTalk(UserName, DownloadUrl string) {
-	access_token := "xxx"
+	access_token := "963d884aec8b9e559f8edd14cc0a2c859a347105349ea0b37a58d1fc585577ad"
 	url := "https://oapi.dingtalk.com/robot/send?access_token="+access_token
 	method := "POST"
 	//	 变量注入到str
-	StringPayload := fmt.Sprintf("{\"msgtype\": \"markdown\",\"markdown\": {\"title\":\"【下载通知】\",\"text\": \"【下载人】：%s \n【下载链接】：%s\n \"},\"at\": {\"isAtAll\": false}}", UserName, DownloadUrl)
+	StringPayload := fmt.Sprintf("{\"msgtype\": \"markdown\",\"markdown\": {\"title\":\"【下载通知】\",\"text\": \"【下载人】：%s \n\n【下载链接】：%s\n\n \"},\"at\": {\"isAtAll\": false}}", UserName, DownloadUrl)
 	payload := strings.NewReader(StringPayload)
 
 	client := &http.Client{}
