@@ -9,7 +9,7 @@ import (
 
 
 func SendDingTalk(UserName, DownloadUrl string) {
-	access_token := "963d884aec8b9e559f8edd14cc0a2c859a347105349ea0b37a58d1fc585577ad"
+	access_token := "xxx"
 	url := "https://oapi.dingtalk.com/robot/send?access_token="+access_token
 	method := "POST"
 	//	 变量注入到str
